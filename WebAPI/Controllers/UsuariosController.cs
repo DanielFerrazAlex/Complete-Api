@@ -19,13 +19,13 @@ namespace WebAPI.Controllers
             List<UsuariosModel> resultado = await _usuariosRepositorio.BuscarTodosUsuarios();
             return Ok(resultado);
         }
-        [HttpGet("BuscarUsuárioPorId{id}")]
+        [HttpGet("BuscarUsuarioPorId{id}")]
         public async Task<ActionResult<UsuariosModel>> BuscarUsuarioPorId(int id)
         {
             UsuariosModel resultado = await _usuariosRepositorio.BuscarUsuarioPorId(id);
             return Ok(resultado);
         }
-        [HttpGet("BuscarUsuárioPorUsuario{usuario}")]
+        [HttpGet("BuscarUsuarioPorUsuario{usuario}")]
         public async Task<ActionResult<UsuariosModel>> BuscarUsuarioPorUsuario(string usuario)
         {
             UsuariosModel resultado = await _usuariosRepositorio.BuscarUsuarioPorUsuario(usuario);
